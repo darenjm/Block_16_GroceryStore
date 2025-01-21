@@ -47,6 +47,14 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  for (const item of items) {
+    if (item.name === name) {
+      console.log(`Price of ${name}:`, item.price);
+      return item.price;
+    }
+  }
+  console.log(`Item with name ${name} not found.`);
+  return null;
 }
 
 /**
